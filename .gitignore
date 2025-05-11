@@ -10,3 +10,5 @@ utlis/__pycache__/strEdit.cpython-39.pyc
 *.xml
 utlis/__pycache__/tools.cpython-39.pyc
 *.pyc
+*.log
+/.idea

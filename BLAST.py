@@ -1,7 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QMainWindow
 import asyncio
-import qdarktheme
 from PyQt6 import QtWidgets
 import qasync
 
@@ -19,12 +18,11 @@ class Ui_MainWindow(object):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
 
-    app.setStyleSheet(qdarktheme.load_stylesheet("light"))
     loop = qasync.QEventLoop(app)
     asyncio.set_event_loop(loop)
-    mainwindows = QMainWindow()
+    main_windows = QMainWindow()
     with loop:
         ui = Ui_MainWindow()
-        ui.set_text_ui(mainwindows)
-        mainwindows.show()
+        ui.set_text_ui(main_windows)
+        main_windows.show()
         loop.run_forever()
